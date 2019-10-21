@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>character/并.JPG</file>
+        <file>character/红.JPG</file>
+        <file>character/交.JPG</file>
+        <file>character/进.JPG</file>
+        <file>character/理.JPG</file>
+        <file>character/融.JPG</file>
+        <file>character/实.JPG</file>
+        <file>character/专.JPG</file>
+        <file>logo.png</file>
+    </qresource>
+</RCC>

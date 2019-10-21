@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>figs/box_rect.png</file>
+        <file>figs/box_square.png</file>
+        <file>figs/block1.png</file>
+        <file>figs/block2.png</file>
+        <file>figs/block3.png</file>
+        <file>figs/block4.png</file>
+        <file>figs/block5.png</file>
+        <file>figs/block6.png</file>
+        <file>figs/block7.png</file>
+        <file>figs/logo.png</file>
+    </qresource>
+</RCC>
