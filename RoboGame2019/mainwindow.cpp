@@ -16,10 +16,10 @@ MainWindow::MainWindow(QWidget *parent) :
     isDoneR = false;
     scoreL = 0;
     scoreR = 0;
-    colorL = "蓝";
-    colorR = "红";
-//    colorL = "红";
-//    colorR = "蓝";
+//    colorL = "蓝";
+//    colorR = "红";
+    colorL = "红";
+    colorR = "蓝";
     ui->LStop->setText(colorL + "队停止计时");
     ui->RStop->setText(colorR + "队停止计时");
     ui->LComment->setText(colorL + "队准备中...");
@@ -106,8 +106,18 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         }
         break;
 
-    case Qt::Key_0:     // 计时复位
+    case Qt::Key_A: // 随机序列
+        on_Random_clicked();
+        break;
+    case Qt::Key_S: // 计时复位
         on_Reset_clicked();
+        break;
+    case Qt::Key_D: // 一分钟倒计时
+        on_Countdown_clicked();
+        break;
+
+    case Qt::Key_W: // 开始计时
+        on_Start_clicked();
         break;
 
     case Qt::Key_Return:
@@ -116,49 +126,40 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         break;
 
     case Qt::Key_7:
-    case Qt::Key_A: // 左队停止计时
+    case Qt::Key_Q: // 左队停止计时
         on_LStop_clicked();
         break;
-    case Qt::Key_4:
-    case Qt::Key_W: // 左队加一分
+    case Qt::Key_4: // 左队加一分
         on_LScorePlus_clicked();
         break;
-    case Qt::Key_1:
-    case Qt::Key_S: // 左队减一分
+    case Qt::Key_1: // 左队减一分
         on_LScoreMinus_clicked();
         break;
 
     case Qt::Key_9:
-    case Qt::Key_L: // 右队停止计时
+    case Qt::Key_E: // 右队停止计时
         on_RStop_clicked();
         break;
-    case Qt::Key_6:
-    case Qt::Key_I:// 右队加一分
+    case Qt::Key_6:// 右队加一分
         on_RScorePlus_clicked();
         break;
-    case Qt::Key_3:
-    case Qt::Key_K: // 右队减一分
+    case Qt::Key_3: // 右队减一分
         on_RScoreMinus_clicked();
         break;
 
 
-//    case Qt::Key_8: // 开始计时
-//        on_Start_clicked();
-//        break;
 
-//    case Qt::Key_5: // 随机序列
-//        on_Random_clicked();
-//        break;
 
-//    case Qt::Key_2: // 一分钟倒计时
-//        on_Countdown_clicked();
-//        break;
 
     }
 }
 
 void MainWindow::on_Countdown_clicked()
 {
+    ui->CTime->setText("01:00");
+    ui->CTime->setStyleSheet("");
+    ui->LComment->setText(colorL + "队准备中...");
+    ui->RComment->setText(colorR + "队准备中...");
     connect(m_pTimer, SIGNAL(timeout()), this, SLOT(CTime_update()));
     m_Time.setHMS(0, 1, 0, 0);
     //m_Time.setHMS(0, 0, 8, 0); // debug
