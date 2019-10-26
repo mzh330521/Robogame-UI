@@ -146,11 +146,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     case Qt::Key_3: // 右队减一分
         on_RScoreMinus_clicked();
         break;
-
-
-
-
-
     }
 }
 
