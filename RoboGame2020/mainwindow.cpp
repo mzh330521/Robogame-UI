@@ -266,13 +266,18 @@ void MainWindow::on_Reset_clicked()
 void MainWindow::init()
 {
     ui->TimeUp->setVisible (false);
-    /*
-    for(int i = 0; i < 6; i++)  // 将排列应用到 box
+
+    int color[6] = {0,0,0,1,1,2};
+    for(int i = 0; i < 6; i++)
     {
-        box[i]->setStyleSheet(box_style(i));
-        box[i]->setText(QString::number(i+1));
+        box[i]->setPixmap(pixmap[color[i]]);
     }
-    */
+
+    for(int i = 0; i < 3; i++)
+    {
+        block[i]->clear();
+    }
+     block[0]->setPixmap(pixmap[1]);
 }
 
 void MainWindow::LRTime_update()
