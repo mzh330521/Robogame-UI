@@ -24,15 +24,15 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(231, 233, 238)</string>
+    <string notr="true"/>
    </property>
    <widget class="QLabel" name="Title">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1920</width>
-      <height>171</height>
+      <x>325</x>
+      <y>40</y>
+      <width>1270</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -43,8 +43,11 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/figs/title.png)</string>
+    </property>
     <property name="text">
-     <string>RoboGame 2020 “共抗疫情”比赛</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -53,19 +56,19 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>890</y>
-      <width>1541</width>
-      <height>161</height>
+      <x>216</x>
+      <y>830</y>
+      <width>1481</width>
+      <height>211</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="Boxs">
+    <layout class="QHBoxLayout" name="Mans">
      <item>
-      <widget class="QLabel" name="Box1">
+      <widget class="QLabel" name="Man1">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -86,7 +89,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RG.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_green.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -97,11 +100,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Box2">
+      <widget class="QLabel" name="Man2">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -120,7 +123,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RG.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_green.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -131,11 +134,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Box3">
+      <widget class="QLabel" name="Man3">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -154,7 +157,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RG.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_green.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -165,11 +168,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Box4">
+      <widget class="QLabel" name="Man4">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -188,7 +191,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RY.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_yellow.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -199,11 +202,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Box5">
+      <widget class="QLabel" name="Man5">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -222,7 +225,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RY.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_yellow.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -233,11 +236,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Box6">
+      <widget class="QLabel" name="Man6">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>240</width>
+         <height>111</height>
         </size>
        </property>
        <property name="font">
@@ -256,7 +259,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RR.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_red.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -272,150 +275,157 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>180</y>
-      <width>1201</width>
-      <height>151</height>
+      <y>150</y>
+      <width>1221</width>
+      <height>181</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="Times">
      <item>
-      <widget class="QLabel" name="LTime">
+      <widget class="QTextEdit" name="LTime">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>100</height>
+         <width>330</width>
+         <height>150</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>等线</family>
-         <pointsize>70</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
+         <family>微软雅黑</family>
+         <pointsize>64</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(40, 64, 121);</string>
+        <string notr="true">color:rgb(175,205,254);
+background: transparent;
+border:none;</string>
        </property>
-       <property name="text">
-        <string>05:00</string>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:64pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;05:00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="CTime">
+      <widget class="QTextEdit" name="CTime">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>100</height>
+         <width>330</width>
+         <height>150</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>等线</family>
-         <pointsize>70</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
+         <family>微软雅黑</family>
+         <pointsize>64</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
-       <property name="text">
-        <string>01:00</string>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(254,254, 254);
+background: transparent;
+border:none;</string>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:64pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;01:00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="RTime">
+      <widget class="QTextEdit" name="RTime">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>100</height>
+         <width>330</width>
+         <height>150</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>等线</family>
-         <pointsize>70</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
+         <family>微软雅黑</family>
+         <pointsize>64</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(121, 31, 34);</string>
+        <string notr="true">color:rgb(255,175,175);
+background: transparent;
+border:none;</string>
        </property>
-       <property name="text">
-        <string>05:00</string>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:64pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;05:00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
     </layout>
-    <zorder>RTime</zorder>
-    <zorder>CTime</zorder>
-    <zorder>LTime</zorder>
-   </widget>
-   <widget class="QLabel" name="LComment">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>480</y>
-      <width>391</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑 Light</family>
-      <pointsize>25</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:blue
-
-</string>
-    </property>
-    <property name="text">
-     <string>蓝队准备中...</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="RComment">
-    <property name="geometry">
-     <rect>
-      <x>1530</x>
-      <y>480</y>
-      <width>391</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑 Light</family>
-      <pointsize>25</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:red</string>
-    </property>
-    <property name="text">
-     <string>红队准备中...</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
    </widget>
    <widget class="QLabel" name="TimeUp">
     <property name="geometry">
@@ -448,16 +458,22 @@ background-color:rgb(255,255,255,200);</string>
    <widget class="QPushButton" name="LScorePlus">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>329</y>
-      <width>271</width>
-      <height>151</height>
+      <x>10</x>
+      <y>275</y>
+      <width>341</width>
+      <height>241</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1920</width>
+      <height>1080</height>
+     </size>
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
-      <pointsize>96</pointsize>
+      <family>微软雅黑</family>
+      <pointsize>100</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -466,9 +482,8 @@ background-color:rgb(255,255,255,200);</string>
      <cursorShape>OpenHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(230, 231, 235);
-background-color:rgb(17, 117, 192);
-border:none;</string>
+     <string notr="true">color:rgb(254, 254, 254);
+border-image:url(:/figs/boards/board_blue.png);</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -477,16 +492,22 @@ border:none;</string>
    <widget class="QPushButton" name="RScorePlus">
     <property name="geometry">
      <rect>
-      <x>1590</x>
-      <y>330</y>
-      <width>271</width>
-      <height>151</height>
+      <x>1569</x>
+      <y>275</y>
+      <width>341</width>
+      <height>241</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1920</width>
+      <height>1080</height>
+     </size>
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
-      <pointsize>96</pointsize>
+      <family>微软雅黑</family>
+      <pointsize>100</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -495,9 +516,8 @@ border:none;</string>
      <cursorShape>OpenHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(230, 231, 235);
-background-color:rgb(255, 111, 111);
-border:none;</string>
+     <string notr="true">color:rgb(254, 254, 254);
+border-image:url(:/figs/boards/board_red.png);</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -506,10 +526,10 @@ border:none;</string>
    <widget class="QPushButton" name="LScoreMinus">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>180</y>
-      <width>271</width>
-      <height>151</height>
+      <x>30</x>
+      <y>150</y>
+      <width>311</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="font">
@@ -534,9 +554,9 @@ border:none;</string>
     <property name="geometry">
      <rect>
       <x>1590</x>
-      <y>180</y>
-      <width>271</width>
-      <height>151</height>
+      <y>150</y>
+      <width>301</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="font">
@@ -561,33 +581,31 @@ border:none;</string>
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>681</y>
-      <width>601</width>
-      <height>181</height>
+      <y>630</y>
+      <width>771</width>
+      <height>201</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="Blocks">
+    <layout class="QHBoxLayout" name="Beds">
      <property name="spacing">
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="Block1">
+      <widget class="QLabel" name="Bed1">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>233</width>
+         <height>107</height>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-style:solid;
-border-width:0.5px;
-border-color: hsl(0,0,0);</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resource.qrc">:/figs/RY.png</pixmap>
+        <pixmap resource="resource.qrc">:/figs/man/man_yellow.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -595,23 +613,24 @@ border-color: hsl(0,0,0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Block2">
+      <widget class="QLabel" name="Bed2">
        <property name="enabled">
         <bool>true</bool>
        </property>
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>233</width>
+         <height>107</height>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-style:solid;
-border-width:0.5px;
-border-color: hsl(0,0,0);</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resource.qrc">:/figs/man/man_yellow.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -619,20 +638,21 @@ border-color: hsl(0,0,0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="Block3">
+      <widget class="QLabel" name="Bed3">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>100</height>
+         <width>233</width>
+         <height>107</height>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-style:solid;
-border-width:0.5px;
-border-color: hsl(0,0,0);</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resource.qrc">:/figs/man/man_yellow.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -645,18 +665,79 @@ border-color: hsl(0,0,0);</string>
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>330</y>
+      <y>300</y>
       <width>1201</width>
-      <height>301</height>
+      <height>331</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="Buttons">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="Random">
+       <property name="maximumSize">
+        <size>
+         <width>384</width>
+         <height>134</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>30</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/figs/buttons/random.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="RStop">
+       <property name="maximumSize">
+        <size>
+         <width>384</width>
+         <height>134</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>30</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>OpenHandCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/figs/buttons/stop_red.png);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QPushButton" name="LStop">
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>120</height>
+         <width>384</width>
+         <height>134</height>
         </size>
        </property>
        <property name="font">
@@ -678,12 +759,10 @@ border-color: hsl(0,0,0);</string>
         <enum>Qt::StrongFocus</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(40, 64, 121);
-background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(17, 117, 192, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;</string>
+        <string notr="true">border-image:url(:/figs/buttons/stop_blue.png);</string>
        </property>
        <property name="text">
-        <string>蓝队停止计时</string>
+        <string/>
        </property>
        <property name="checkable">
         <bool>false</bool>
@@ -693,12 +772,12 @@ border:none;</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="Start">
+     <item row="1" column="2">
+      <widget class="QPushButton" name="Countdown">
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>120</height>
+         <width>384</width>
+         <height>134</height>
         </size>
        </property>
        <property name="font">
@@ -716,77 +795,10 @@ border:none;</string>
         <enum>Qt::StrongFocus</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(97, 106, 88);
-background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(149, 164, 141, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;
-</string>
+        <string notr="true">border-image:url(:/figs/buttons/countdown.png);</string>
        </property>
        <property name="text">
-        <string>开始计时</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="RStop">
-       <property name="maximumSize">
-        <size>
-         <width>360</width>
-         <height>120</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>微软雅黑</family>
-         <pointsize>30</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>OpenHandCursor</cursorShape>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::StrongFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:rgb(121, 31, 34);
-background-color:qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;</string>
-       </property>
-       <property name="text">
-        <string>红队停止计时</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="Random">
-       <property name="maximumSize">
-        <size>
-         <width>360</width>
-         <height>120</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>微软雅黑</family>
-         <pointsize>30</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>OpenHandCursor</cursorShape>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::StrongFocus</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:rgb(97, 106, 88);
-background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(149, 164, 141, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;</string>
-       </property>
-       <property name="text">
-        <string>生成随机序列</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -794,8 +806,8 @@ border:none;</string>
       <widget class="QPushButton" name="Reset">
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>120</height>
+         <width>384</width>
+         <height>134</height>
         </size>
        </property>
        <property name="font">
@@ -813,21 +825,19 @@ border:none;</string>
         <enum>Qt::StrongFocus</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(97, 106, 88);
-background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(149, 164, 141, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;</string>
+        <string notr="true">border-image:url(:/figs/buttons/reset.png);</string>
        </property>
        <property name="text">
-        <string>复位</string>
+        <string/>
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="Countdown">
+     <item row="0" column="1">
+      <widget class="QPushButton" name="Start">
        <property name="maximumSize">
         <size>
-         <width>360</width>
-         <height>120</height>
+         <width>384</width>
+         <height>134</height>
         </size>
        </property>
        <property name="font">
@@ -845,12 +855,11 @@ border:none;</string>
         <enum>Qt::StrongFocus</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(97, 106, 88);
-background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(149, 164, 141, 255), stop:1 rgba(255, 255, 255, 255));
-border:none;</string>
+        <string notr="true">border-image:url(:/figs/buttons/start.png);
+</string>
        </property>
        <property name="text">
-        <string>1分钟倒计时</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -859,10 +868,10 @@ border:none;</string>
    <widget class="QLabel" name="Logo">
     <property name="geometry">
      <rect>
-      <x>1720</x>
-      <y>0</y>
-      <width>200</width>
-      <height>150</height>
+      <x>1709</x>
+      <y>30</y>
+      <width>171</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="text">
@@ -875,8 +884,182 @@ border:none;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <zorder>RComment</zorder>
-   <zorder>LComment</zorder>
+   <widget class="QLabel" name="Background">
+    <property name="geometry">
+     <rect>
+      <x>-1920</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>640</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/figs/background.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Final">
+    <property name="geometry">
+     <rect>
+      <x>-1920</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>640</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/figs/final.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="LComment">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>589</y>
+      <width>311</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>300</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(175,205,254);
+background: transparent;
+border:none;</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:26pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;红队准备中...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="RComment">
+    <property name="geometry">
+     <rect>
+      <x>1589</x>
+      <y>589</y>
+      <width>311</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>300</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,175,175);
+background: transparent;
+border:none;</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:26pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;红队准备中...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>Background</zorder>
+   <zorder>Final</zorder>
    <zorder>layoutWidget</zorder>
    <zorder>layoutWidget</zorder>
    <zorder>Title</zorder>
@@ -888,6 +1071,8 @@ border:none;</string>
    <zorder>RScoreMinus</zorder>
    <zorder>Logo</zorder>
    <zorder>TimeUp</zorder>
+   <zorder>LComment</zorder>
+   <zorder>RComment</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

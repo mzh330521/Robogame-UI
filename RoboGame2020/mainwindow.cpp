@@ -8,6 +8,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    /* 设置背景图片 */
+    QPixmap bkgnd(":figs/background.png");
+    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(palette);
+
     TotalTime = 5; // 比赛时间为 5 min
     m_pTimer = new QTimer();
     m_pTimer->setInterval(1000);
@@ -20,70 +27,98 @@ MainWindow::MainWindow(QWidget *parent) :
 //    colorR = "红";
     colorL = "红";
     colorR = "蓝";
-    ui->LStop->setText(colorL + "队停止计时");
-    ui->RStop->setText(colorR + "队停止计时");
-    ui->LComment->setText(colorL + "队准备中...");
-    ui->RComment->setText(colorR + "队准备中...");
+
     if(colorL == "蓝")
     {
-        ui->LScorePlus->setStyleSheet("color:rgb(230, 231, 235);\
-                                      background-color:rgb(17, 117, 192);\
-                                      border:none;");
-        ui->RScorePlus->setStyleSheet("color:rgb(230, 231, 235);\
-                                      background-color:rgb(255, 111, 111);\
-                                      border:none;");
-        ui->LComment->setStyleSheet("color:blue");
-        ui->RComment->setStyleSheet("color:red");
-        ui->LStop->setStyleSheet("color:rgb(40, 64, 121);\
-                                 background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, \
-                                    stop:0 rgba(17, 117, 192, 255), stop:1 rgba(255, 255, 255, 255));\
-                                 border:none;");
-        ui->RStop->setStyleSheet("color:rgb(121, 31, 34);\
-                                 background-color:qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, \
-                                    stop:0 rgba(255, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));\
-                                 border:none;");
-        ui->LTime->setStyleSheet("color:rgb(40, 64, 121);");
-        ui->RTime->setStyleSheet("color:rgb(121, 31, 34);");
+        ui->LScorePlus->setStyleSheet("color:rgb(254,254,254);\
+                                       border-image:url(:/figs/boards/board_blue.png);");
+        ui->RScorePlus->setStyleSheet("color:rgb(254,254,254);\
+                                       border-image:url(:/figs/boards/board_red.png);");
+        ui->LComment->setStyleSheet("color:rgb(175,205,254);\
+                                     background: transparent;\
+                                     border:none;");
+        ui->RComment->setStyleSheet("color:rgb(255,175,175);\
+                                     background: transparent;\
+                                     border:none;");
+        ui->LStop->setStyleSheet("border-image:url(:/figs/buttons/stop_blue.png);");
+        ui->RStop->setStyleSheet("border-image:url(:/figs/buttons/stop_red.png);");
+        ui->LTime->setStyleSheet("color:rgb(175,205,254);\
+                                  background: transparent;\
+                                  border:none;");
+        ui->RTime->setStyleSheet("color:rgb(255,175,175);\
+                                  background: transparent;\
+                                  border:none;");
     }
     else if(colorL == "红")
     {
-        ui->RScorePlus->setStyleSheet("color:rgb(230, 231, 235);\
-                                      background-color:rgb(17, 117, 192);\
-                                      border:none;");
-        ui->LScorePlus->setStyleSheet("color:rgb(230, 231, 235);\
-                                      background-color:rgb(255, 111, 111);\
-                                      border:none;");
-        ui->RComment->setStyleSheet("color:blue");
-        ui->LComment->setStyleSheet("color:red");
-        ui->RStop->setStyleSheet("color:rgb(40, 64, 121);\
-                                 background-color:qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, \
-                                    stop:0 rgba(17, 117, 192, 255), stop:1 rgba(255, 255, 255, 255));\
-                                 border:none;");
-        ui->LStop->setStyleSheet("color:rgb(121, 31, 34);\
-                                 background-color:qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:1, \
-                                    stop:0 rgba(255, 111, 111, 255), stop:1 rgba(255, 255, 255, 255));\
-                                 border:none;");
-        ui->RTime->setStyleSheet("color:rgb(40, 64, 121);");
-        ui->LTime->setStyleSheet("color:rgb(121, 31, 34);");
+        ui->RScorePlus->setStyleSheet("color:rgb(254,254,254);\
+                                       border-image:url(:/figs/boards/board_blue.png);");
+        ui->LScorePlus->setStyleSheet("color:rgb(254,254,254);\
+                                       border-image:url(:/figs/boards/board_red.png);");
+        ui->RComment->setStyleSheet("color:rgb(175,205,254);\
+                                     background: transparent;\
+                                     border:none;");
+        ui->LComment->setStyleSheet("color:rgb(255,175,175);\
+                                     background: transparent;\
+                                     border:none;");
+        ui->RStop->setStyleSheet("border-image:url(:/figs/buttons/stop_blue.png);");
+        ui->LStop->setStyleSheet("border-image:url(:/figs/buttons/stop_red.png);");
+        ui->RTime->setStyleSheet("color:rgb(175,205,254);\
+                                  background: transparent;\
+                                  border:none;");
+        ui->LTime->setStyleSheet("color:rgb(255,175,175);\
+                                  background: transparent;\
+                                  border:none;");
     }
     ui->TimeUp->setVisible (false);
 
-    box[0] = ui->Box1;
-    box[1] = ui->Box2;
-    box[2] = ui->Box3;
-    box[3] = ui->Box4;
-    box[4] = ui->Box5;
-    box[5] = ui->Box6;
+    man[0] = ui->Man1;
+    man[1] = ui->Man2;
+    man[2] = ui->Man3;
+    man[3] = ui->Man4;
+    man[4] = ui->Man5;
+    man[5] = ui->Man6;
 
-    block[0] = ui->Block1;
-    block[1] = ui->Block2;
-    block[2] = ui->Block3;
+    bed[0] = ui->Bed1;
+    bed[1] = ui->Bed2;
+    bed[2] = ui->Bed3;
 
-    pixmap[0].load(":/figs/RG.png");
-    pixmap[1].load(":/figs/RY.png");
-    pixmap[2].load(":/figs/RR.png");
-    pixmap[3].load(":/figs/LY.png");
+    pixmap[0].load(":/figs/man/man_green.png");
+    pixmap[1].load(":/figs/man/man_yellow.png");
+    pixmap[2].load(":/figs/man/man_red.png");
 
+     ui->LTime->setAlignment(Qt::AlignCenter);
+     ui->RTime->setAlignment(Qt::AlignCenter);
+     ui->CTime->setAlignment(Qt::AlignCenter);
+     ui->LTime->setFocusPolicy(Qt::NoFocus);
+     ui->RTime->setFocusPolicy(Qt::NoFocus);
+     ui->CTime->setFocusPolicy(Qt::NoFocus);
+
+    /* 时间字体描边 */
+    QTextCharFormat format;
+    format.setTextOutline (QPen(Qt::black, 5, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin)); // Color and width of outline
+    ui->LTime->mergeCurrentCharFormat(format);
+    ui->RTime->mergeCurrentCharFormat(format);
+    ui->CTime->mergeCurrentCharFormat(format);
+    ui->LTime->setText("0"+QString::number(TotalTime)+":00");
+    ui->RTime->setText("0"+QString::number(TotalTime)+":00");
+    ui->CTime->setText("01:00");
+
+
+    ui->LComment->setAlignment(Qt::AlignCenter);
+    ui->RComment->setAlignment(Qt::AlignCenter);
+    ui->LComment->setFocusPolicy(Qt::NoFocus);
+    ui->RComment->setFocusPolicy(Qt::NoFocus);
+
+    /* 文字说明字体描边 */
+    format.setTextOutline (QPen(Qt::black, 1.3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin)); // Color and width of outline
+    ui->LComment->mergeCurrentCharFormat(format);
+    ui->RComment->mergeCurrentCharFormat(format);
+    ui->LComment->setText(colorL + "队准备中...");
+    ui->RComment->setText(colorR + "队准备中...");
+
+
+    /* 初始化随机数种子 */
     qsrand(static_cast<unsigned>(QTime(0,0,0).secsTo(QTime::currentTime())));
 }
 
@@ -161,7 +196,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 void MainWindow::on_Countdown_clicked()
 {
     ui->CTime->setText("01:00");
-    ui->CTime->setStyleSheet("");
+//    ui->CTime->setStyleSheet("");
     ui->LComment->setText(colorL + "队准备中...");
     ui->RComment->setText(colorR + "队准备中...");
     connect(m_pTimer, SIGNAL(timeout()), this, SLOT(CTime_update()));
@@ -231,18 +266,18 @@ void MainWindow::on_Random_clicked()
         }
     }
 
-    for(int i = 0; i < 6; i++)  // 将排列应用到 box
+    for(int i = 0; i < 6; i++)  // 将排列应用到 man
     {
-        box[i]->setPixmap(pixmap[color[i]]);
+        man[i]->setPixmap(pixmap[color[i]]);
     }
 
     for(int i = 0; i < 3; i++)
     {
-        block[i]->clear();
+        bed[i]->clear();
     }
 
     m = qrand() % 3;
-    block[m]->setPixmap(pixmap[2*(qrand()%2)+1]);
+    bed[m]->setPixmap(pixmap[1]);
 }
 
 void MainWindow::on_Reset_clicked()
@@ -254,7 +289,7 @@ void MainWindow::on_Reset_clicked()
     ui->LTime->setText("0"+QString::number(TotalTime)+":00");
     ui->RTime->setText("0"+QString::number(TotalTime)+":00");
     ui->CTime->setText("01:00");
-    ui->CTime->setStyleSheet("");
+//    ui->CTime->setStyleSheet("");
     ui->LComment->setText(colorL + "队准备中...");
     ui->RComment->setText(colorR + "队准备中...");
     ui->LScorePlus->setText("0");
@@ -270,14 +305,14 @@ void MainWindow::init()
     int color[6] = {0,0,0,1,1,2};
     for(int i = 0; i < 6; i++)
     {
-        box[i]->setPixmap(pixmap[color[i]]);
+        man[i]->setPixmap(pixmap[color[i]]);
     }
 
     for(int i = 0; i < 3; i++)
     {
-        block[i]->clear();
+        bed[i]->clear();
     }
-     block[0]->setPixmap(pixmap[1]);
+     bed[0]->setPixmap(pixmap[1]);
 }
 
 void MainWindow::LRTime_update()
@@ -350,10 +385,11 @@ void MainWindow::CTime_update()
 //        ui->TimeUp->setVisible (true);
 //        ui->TimeUp->setText(m_Time.toString("s"));
 //    }
-    if(m_Time == temp_5)
-    {
-        ui->CTime->setStyleSheet("color:red");
-    }
+
+//    if(m_Time == temp_5)
+//    {
+//        ui->CTime->setStyleSheet("color:red");
+//    }
 
     if(m_Time == temp)
     {

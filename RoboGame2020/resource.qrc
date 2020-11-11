@@ -1,9 +1,32 @@
 <RCC>
     <qresource prefix="/">
         <file>figs/logo.png</file>
-        <file>figs/LY.png</file>
-        <file>figs/RG.png</file>
-        <file>figs/RR.png</file>
-        <file>figs/RY.png</file>
+        <file>figs/arrows/LY.png</file>
+        <file>figs/arrows/RG.png</file>
+        <file>figs/arrows/RR.png</file>
+        <file>figs/arrows/RY.png</file>
+        <file>figs/man/man_green0.png</file>
+        <file>figs/man/man_red.png</file>
+        <file>figs/man/man_red0.png</file>
+        <file>figs/man/man_yellow.png</file>
+        <file>figs/man/man_yellow0.png</file>
+        <file>figs/background.png</file>
+        <file>figs/bed.png</file>
+        <file>figs/beds.png</file>
+        <file>figs/test.jpg</file>
+        <file>figs/man/man_green.png</file>
+        <file>figs/boards/board_blue.png</file>
+        <file>figs/boards/board_red.png</file>
+        <file>figs/buttons/button_blue.png</file>
+        <file>figs/buttons/button_gray.png</file>
+        <file>figs/buttons/button_red.png</file>
+        <file>figs/buttons/countdown.png</file>
+        <file>figs/buttons/random.png</file>
+        <file>figs/buttons/reset.png</file>
+        <file>figs/buttons/start.png</file>
+        <file>figs/buttons/stop_blue.png</file>
+        <file>figs/buttons/stop_red.png</file>
+        <file>figs/title.png</file>
+        <file>figs/final.png</file>
     </qresource>
 </RCC>

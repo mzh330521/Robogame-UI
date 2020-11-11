@@ -59,8 +59,8 @@ private:
     QString colorL,colorR;
     QTime m_Time,timeL,timeR;
     QTimer* m_pTimer;   // 计时器
-    QLabel *box[6];     // box指针数组，便于批量操作ui中的Box
-    QLabel *block[3];   // 类上
+    QLabel *man[6];     // man指针数组，便于批量操作ui中的Man
+    QLabel *bed[3];   // 类上
     QPixmap pixmap[4];  // 右 绿黄红 & 左黄
 };
 
