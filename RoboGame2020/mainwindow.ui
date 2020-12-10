@@ -868,10 +868,10 @@ border-image:url(:/figs/boards/board_red.png);</string>
    <widget class="QLabel" name="Logo">
     <property name="geometry">
      <rect>
-      <x>1709</x>
-      <y>30</y>
-      <width>171</width>
-      <height>121</height>
+      <x>1700</x>
+      <y>20</y>
+      <width>181</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="text">

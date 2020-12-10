@@ -250,20 +250,25 @@ void MainWindow::on_RStop_clicked()
 
 void MainWindow::on_Random_clicked()
 {
-
+    /* 避免出现连续三个绿色 */
     int color[6] = {0,0,0,1,1,2};
-    int m = 0, temp = 0;
-
-
-    for(int i = 0; i < 5; i++)  // 生成 0 ~ 5 的全排列
+    int index_green[3] = {0};
+    int rd = 0, temp = 0;
+    while(1)
     {
-        m = qrand()%(6-i)+i;
-        if(m!=i)
+        for(int i = 0; i < 5; i++)  // 生成 0 ~ 5 的全排列
         {
-            temp = color[i];
-            color[i] = color[m];
-            color[m] = temp;
+            rd = qrand()%(6-i)+i;
+            if(rd!=i)
+            {
+                temp = color[i];
+                color[i] = color[rd];
+                color[rd] = temp;
+            }
         }
+        for(int i = 0, j = 0; i < 6; i++)
+            if(color[i] == 0) index_green[j++] = i;
+        if(index_green[0]+index_green[2]!=index_green[1]*2) break;
     }
 
     for(int i = 0; i < 6; i++)  // 将排列应用到 man
@@ -276,8 +281,8 @@ void MainWindow::on_Random_clicked()
         bed[i]->clear();
     }
 
-    m = qrand() % 3;
-    bed[m]->setPixmap(pixmap[1]);
+    rd = qrand() % 3;
+    bed[rd]->setPixmap(pixmap[1]);
 }
 
 void MainWindow::on_Reset_clicked()
