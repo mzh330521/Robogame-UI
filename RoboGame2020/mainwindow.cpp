@@ -408,7 +408,7 @@ void MainWindow::CTime_update()
 
 void MainWindow::on_LScorePlus_clicked()
 {
-    if(scoreL < 16)
+    if(scoreL < 8)
         scoreL++;
     if(isDoneL)
     {
@@ -418,7 +418,7 @@ void MainWindow::on_LScorePlus_clicked()
 
 void MainWindow::on_RScorePlus_clicked()
 {
-    if(scoreR < 16)
+    if(scoreR < 8)
         scoreR ++;
     if(isDoneR)
     {
